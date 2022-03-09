@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<style>
+    a+a {
+        margin-left: 10px;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>zapis</title>
+
+</head>
+<body>
+<h1>Please confirm the information</h1>
+<p th:text="'id: ' + ${note.title}"></p>
+
+<p th:text="'content: ' + ${note.message}"></p>
+<p th:text="'content: ' + ${note.crate_date}"></p>
+<p th:text="'content: ' + ${note.getPerson().getPersonId()}"></p>
+
+
+<div class="col-lg-5">
+    <a href="/add-note">Submit another message</a>
+    <a href="/notes">Moje notatki</a>
+</div>
+
+
+
+
+</body>
+</html>
